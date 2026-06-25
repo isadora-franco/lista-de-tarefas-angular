@@ -1,0 +1,110 @@
+:host {
+  width: 100%;
+
+  header {
+    width: 100%;
+
+    .mini-heading {
+      margin: 2px 0 18px;
+      text-align: center;
+
+      span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 10px;
+        border-radius: 999px;
+        color: var(--accent-soft);
+        background: rgba(255, 255, 255, 0.055);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+      }
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      margin: 10px 0 6px;
+      color: var(--white);
+      text-align: center;
+      letter-spacing: -0.7px;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      color: var(--grey);
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  .has-items {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 18px;
+  }
+
+  .create-task-card {
+    width: 100%;
+  }
+
+  .priority-selector {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .priority-option {
+    min-height: 36px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--grey-light);
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover,
+    &.is-active {
+      color: var(--white);
+      transform: translateY(-1px);
+    }
+
+    &.priority-low.is-active {
+      border-color: var(--priority-low);
+      background: rgba(34, 197, 94, 0.13);
+      box-shadow: 0 10px 24px rgba(34, 197, 94, 0.1);
+    }
+
+    &.priority-medium.is-active {
+      border-color: var(--priority-medium);
+      background: rgba(245, 158, 11, 0.13);
+      box-shadow: 0 10px 24px rgba(245, 158, 11, 0.1);
+    }
+
+    &.priority-high.is-active {
+      border-color: var(--priority-high);
+      background: rgba(248, 113, 113, 0.14);
+      box-shadow: 0 10px 24px rgba(248, 113, 113, 0.12);
+    }
+  }
+
+  .task-create-input {
+    margin-bottom: 0;
+  }
+
+  .remove-margin-bottom {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,40 @@
+@for(item of inputListItems; track item.id){
+<article
+  class="task-card"
+  [class.completed-item]="item.checked"
+  [class.priority-low]="item.priority === 'low'"
+  [class.priority-medium]="item.priority === 'medium'"
+  [class.priority-high]="item.priority === 'high'"
+>
+  <label class="task-check" [for]="'check-' + item.id">
+    <input
+      type="checkbox"
+      #inputCheckbox
+      [id]="'check-' + item.id"
+      [checked]="item.checked"
+      (input)="updateItemCheckbox(item.id, inputCheckbox.checked)"
+    />
+    <span></span>
+  </label>
+
+  <div class="task-content">
+    <span class="priority-pill">{{ priorityLabel(item.priority) }}</span>
+
+    <input
+      type="text"
+      #inputValue
+      [id]="item.id"
+      [value]="item.value"
+      placeholder="Descreva a tarefa"
+      (input)="updateItemText(item.id, inputValue.value)"
+    />
+  </div>
+
+  <button
+    class="btn btn-danger-circle"
+    title="Remover tarefa"
+    aria-label="Remover tarefa"
+    (click)="deleteItem(item.id)"
+  ></button>
+</article>
+}

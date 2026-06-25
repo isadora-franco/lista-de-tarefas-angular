@@ -1,0 +1,36 @@
+:root {
+  --primary: #6366f1;
+  --primary-010: #4f46e5;
+  --primary-glow: rgba(99, 102, 241, 0.24);
+
+  --accent: #38bdf8;
+  --accent-010: #0284c7;
+  --accent-soft: #bae6fd;
+
+  --white: #fffaf5;
+  --white-soft: #eef2ff;
+
+  --grey: #a8adbd;
+  --grey-light: #d7dbea;
+
+  --bg: #101521;
+  --bg-card: rgba(255, 255, 255, 0.08);
+  --bg-card-hover: rgba(255, 255, 255, 0.12);
+  --bg-input: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.22);
+  --border-focus: #a5b4fc;
+
+  --red: #f87171;
+  --red-010: #ef4444;
+
+  --success: #22c55e;
+  --success-010: #15803d;
+
+  --priority-low: #22c55e;
+  --priority-medium: #f59e0b;
+  --priority-high: #f87171;
+
+  --gradient-header: linear-gradient(135deg, #6366f1 0%, #38bdf8 100%);
+  --gradient-btn: linear-gradient(135deg, #6366f1 0%, #38bdf8 100%);
+}

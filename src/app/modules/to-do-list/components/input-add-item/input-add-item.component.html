@@ -1,0 +1,64 @@
+<header
+  [ngClass]="{
+    'has-items': inputListItems.length
+  }"
+>
+  <div class="mini-heading">
+    <span>Lista de tarefas</span>
+    <h1>Minhas tarefas</h1>
+    <p class="subtitle">
+      @if(inputListItems.length){
+      {{ inputListItems.length }}
+      {{ inputListItems.length === 1 ? 'tarefa criada' : 'tarefas criadas' }}
+      } @else {
+      Organize suas pendências por prioridade.
+      }
+    </p>
+  </div>
+
+  <div
+    [ngClass]="{
+      container: inputListItems.length
+    }"
+    class="create-task-card"
+  >
+    <div class="priority-selector" aria-label="Escolha a prioridade da tarefa">
+      @for(priority of priorityOptions; track priority.value){
+      <button
+        type="button"
+        class="priority-option"
+        [class.is-active]="selectedPriority === priority.value"
+        [ngClass]="'priority-' + priority.value"
+        [title]="priority.hint"
+        (click)="selectPriority(priority.value)"
+      >
+        {{ priority.label }}
+      </button>
+      }
+    </div>
+
+    <label
+      class="input-label-text task-create-input"
+      for="inputValue"
+      [ngClass]="{
+        'remove-margin-bottom': !inputListItems.length
+      }"
+    >
+      <input
+        type="text"
+        (keyup.enter)="focusAndAddItem(inputText.value)"
+        placeholder="Digite uma nova tarefa..."
+        id="inputValue"
+        autofocus
+        #inputText
+      />
+
+      <button
+        class="btn btn-primary-circle"
+        title="Adicionar tarefa"
+        aria-label="Adicionar tarefa"
+        (click)="focusAndAddItem(inputText.value)"
+      ></button>
+    </label>
+  </div>
+</header>

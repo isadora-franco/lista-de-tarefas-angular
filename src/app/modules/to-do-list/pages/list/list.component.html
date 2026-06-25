@@ -1,0 +1,79 @@
+<section class="app-page">
+  <main class="task-panel">
+    <app-input-add-item
+      [inputListItems]="getListItems()"
+      (outputAddListItem)="getInputAndAddItem($event)"
+    />
+
+    @if(!getListItems().length){
+    <section class="empty-state">
+      <img
+        src="assets/img/task-list-null.png"
+        alt="Sua lista está vazia"
+        loading="eager"
+      />
+
+      <p class="empty-title">Sua lista ainda está em branco.</p>
+      <p class="empty-text">
+        Adicione a primeira tarefa, escolha a prioridade e use os filtros para
+        acompanhar melhor o que precisa ser feito.
+      </p>
+    </section>
+    } @else {
+    <section class="summary-grid" aria-label="Resumo da lista">
+      <article>
+        <span>Total</span>
+        <strong>{{ getListItems().length }}</strong>
+      </article>
+      <article>
+        <span>Pendentes</span>
+        <strong>{{ pendingItems().length }}</strong>
+      </article>
+      <article>
+        <span>Concluídas</span>
+        <strong>{{ completedItems().length }}</strong>
+      </article>
+    </section>
+
+    <section class="filter-bar" aria-label="Filtros da lista">
+      @for(filter of filterOptions; track filter.value){
+      <button
+        type="button"
+        [class.is-active]="activeFilter() === filter.value"
+        (click)="activeFilter.set(filter.value)"
+      >
+        {{ filter.label }}
+      </button>
+      }
+    </section>
+
+    <section class="task-list-area">
+      @if(visibleItems().length){
+      <app-input-list-item
+        [inputListItems]="visibleItems()"
+        (outputUpdateItemCheckbox)="updateItemCheckbox($event)"
+        (outputUpdateItemText)="updateItemText($event)"
+        (outputDeleteItem)="deleteItem($event)"
+      />
+      } @else {
+      <div class="filtered-empty">
+        <strong>Nada para mostrar nesse filtro.</strong>
+        <p>Troque o filtro ou adicione uma nova tarefa.</p>
+      </div>
+      }
+    </section>
+
+    <footer>
+      @if(completedItems().length){
+      <button class="btn btn-soft" (click)="deleteCompletedItems()">
+        Limpar concluídas
+      </button>
+      }
+
+      <button class="btn btn-danger" (click)="deleteAllItems()">
+        Apagar lista
+      </button>
+    </footer>
+    }
+  </main>
+</section>
