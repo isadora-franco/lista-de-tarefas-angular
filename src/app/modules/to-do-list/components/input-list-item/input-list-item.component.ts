@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-// Interface
+//interface
 import { IListItems, TaskPriority } from '../../interface/IListItems.iterface';
 
 @Component({

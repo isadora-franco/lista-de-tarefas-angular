@@ -1,14 +1,14 @@
 import { Component, computed, signal } from '@angular/core';
 import Swal from 'sweetalert2';
 
-// Components
+//componentes
 import { InputAddItemComponent } from '../../components/input-add-item/input-add-item.component';
 import { InputListItemComponent } from '../../components/input-list-item/input-list-item.component';
 
-// Interface
+//interface
 import { IListItems, TaskPriority } from '../../interface/IListItems.iterface';
 
-// Enum
+//enum
 import { ELocalStorage } from '../../enum/ELocalStorage.enum';
 
 type TaskFilter = 'all' | 'pending' | 'completed';
