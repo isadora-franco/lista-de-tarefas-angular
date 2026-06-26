@@ -67,12 +67,13 @@
     height: 38px;
     min-width: 38px;
     border-radius: 14px;
-    background: var(--gradient-btn);
-    box-shadow: 0 12px 22px rgba(139, 92, 246, 0.26);
+    background: var(--primary-solid);
+    box-shadow: 0 12px 22px rgba(79, 70, 229, 0.22);
 
     &:hover {
+      background: var(--primary-solid-hover);
       transform: translateY(-1px) scale(1.04);
-      box-shadow: 0 16px 28px rgba(139, 92, 246, 0.32);
+      box-shadow: 0 16px 28px rgba(79, 70, 229, 0.28);
     }
 
     &::after {
