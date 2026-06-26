@@ -1,6 +1,6 @@
 # Lista de Tarefas em Angular
 
-Projeto final desenvolvido em Angular com foco em organização de tarefas, persistência local e uma interface simples, responsiva e funcional.
+Projeto final desenvolvido em Angular com foco em organização de atividades, persistência local e uma interface simples, responsiva e funcional.
 
 ## O que o projeto faz
 
