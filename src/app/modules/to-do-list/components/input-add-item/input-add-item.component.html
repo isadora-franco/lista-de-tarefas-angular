@@ -4,14 +4,13 @@
   }"
 >
   <div class="mini-heading">
-    <span>Lista de tarefas</span>
-    <h1>Minhas tarefas</h1>
+    <h1>Lista de tarefas</h1>
     <p class="subtitle">
       @if(inputListItems.length){
       {{ inputListItems.length }}
       {{ inputListItems.length === 1 ? 'tarefa criada' : 'tarefas criadas' }}
       } @else {
-      Organize suas pendências por prioridade.
+      Organize suas atividades por prioridade.
       }
     </p>
   </div>
@@ -22,7 +21,7 @@
     }"
     class="create-task-card"
   >
-    <div class="priority-selector" aria-label="Escolha a prioridade da tarefa">
+    <div class="priority-selector" aria-label="Escolha a prioridade da atividade">
       @for(priority of priorityOptions; track priority.value){
       <button
         type="button"
@@ -47,7 +46,7 @@
       <input
         type="text"
         (keyup.enter)="focusAndAddItem(inputText.value)"
-        placeholder="Digite uma nova tarefa..."
+        placeholder="Digite uma nova atividade..."
         id="inputValue"
         autofocus
         #inputText
@@ -55,8 +54,8 @@
 
       <button
         class="btn btn-primary-circle"
-        title="Adicionar tarefa"
-        aria-label="Adicionar tarefa"
+        title="Adicionar atividade"
+        aria-label="Adicionar atividade"
         (click)="focusAndAddItem(inputText.value)"
       ></button>
     </label>
