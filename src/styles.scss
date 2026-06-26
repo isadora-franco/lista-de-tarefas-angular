@@ -1,6 +1,6 @@
 @import "scss/index";
 
-/* Tema do SweetAlert2 alinhado ao visual do projeto */
+
 .swal2-popup {
   background: rgba(20, 22, 42, 0.96) !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
@@ -24,11 +24,19 @@
     color: var(--priority-high) !important;
   }
 
-  .swal2-confirm {
-    background: var(--gradient-btn) !important;
-    border-radius: 13px !important;
-    font-weight: 800 !important;
-    box-shadow: none !important;
+.swal2-confirm {
+  background: #d85c5c !important;
+  color: var(--white) !important;
+  border-radius: 13px !important;
+  font-weight: 800 !important;
+  box-shadow: 0 12px 24px rgba(216, 92, 92, 0.18) !important;
+  transition: all 0.2s ease !important;
+}
+
+  .swal2-confirm:hover {
+    background: #c94a4a !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 16px 28px rgba(216, 92, 92, 0.24) !important;
   }
 
   .swal2-cancel {
