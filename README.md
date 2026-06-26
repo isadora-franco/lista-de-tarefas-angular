@@ -14,7 +14,7 @@ Projeto final desenvolvido em Angular com foco em organização de atividades, p
 
 ## Visão própria adicionada
 
-A proposta adicionada ao projeto foi deixar a lista mais prática para uso diário, sem transformar a aplicação em algo complexo demais. Além do CRUD básico de tarefas, foram implementados:
+A proposta adicionada ao projeto foi deixar a lista mais prática para uso diário, mantendo uma experiência direta, organizada e fácil de usar. Além do CRUD básico de tarefas, foram implementados:
 
 - seleção de prioridade ao criar uma tarefa: **Em prazo**, **Hoje** ou **Urgente**;
 - cards de resumo com total, pendentes e concluídas;
